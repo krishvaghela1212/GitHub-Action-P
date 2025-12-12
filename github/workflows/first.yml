@@ -1,0 +1,23 @@
+name: Simple Java Build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Compile Java file
+        run: javac Fibonacci.java
+
+      - name: Run Java program
+        run: java Fibonacci
