@@ -3,7 +3,7 @@ public class Fibonacci {
     int n = 10;
     int a = 0, b = 1;
 
-    System.out.println("Fibonacci Sequence:");
+    System.out.println("Fibonacci Sequence:Number");
     for (int i = 0; i < n; i++) {
       System.out.print(a + " ");
       int sum = a + b;
